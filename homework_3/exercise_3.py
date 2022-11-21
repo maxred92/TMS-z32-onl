@@ -1,0 +1,5 @@
+a=int(input("a="))
+b=int(input("b="))
+x=abs(a)
+y=abs(b)
+print((x-y)/(1+x*y),sep='\n')
