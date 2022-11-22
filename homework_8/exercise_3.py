@@ -1,6 +1,5 @@
 """ 3. Откройте файл «unsorted_names.txt» содержащий имена студентов.
-Прочитайте данные, отсортируйте их и запишите 
-в новый файл «sorted_names.txt» (каждое имя начинается с новой строки
+Прочитайте данные, отсортируйте их и запишите в новый файл «sorted_names.txt» (каждое имя начинается с новой строки
 _______
 Aaron
 Adrian
@@ -9,14 +8,10 @@ Wiley
 ________
  """
 
-with open("unsorted_names.txt", mode="r") as file:
-    src = file.readlines()
-src.sort()
-sorted_name = []
-for i in src:
-    i = i.strip("\n")
-    sorted_name.append(i)
-print(sorted_name)
-with open("sorted_names.txt", mode="w") as file:
-    for item in sorted_name:
-        file.write(item.strip("\n") + "\n")
+with open('unsorted_name.txt', 'r') as file:
+    full_txt = sorted(file.read().splitlines())
+    print(full_txt)
+with open('sorted_names.txt', 'w') as file:
+    for item in full_txt:
+        file.write(item + "\n")
+    print(full_txt, file=file)
