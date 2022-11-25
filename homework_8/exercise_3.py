@@ -9,9 +9,7 @@ ________
  """
 
 with open('unsorted_name.txt', 'r') as file:
-    full_txt = sorted(file.read().splitlines())
-    print(full_txt)
+    name = file.readlines()
+    sorted_file = sorted(name)
 with open('sorted_names.txt', 'w') as file:
-    for item in full_txt:
-        file.write(item + "\n")
-    print(full_txt, file=file)
+    file.writelines(sorted_file)
